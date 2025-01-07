@@ -4,7 +4,10 @@ from pydantic import BaseModel, Field
 
 from ml.data import apply_label, process_data
 from ml.model import load_model
+<<<<<<< HEAD
 
+=======
+>>>>>>> de7d7c9 (Revert local_api.py and main.py to match origin/main)
 
 # DO NOT MODIFY
 class Data(BaseModel):
@@ -25,12 +28,20 @@ class Data(BaseModel):
     hours_per_week: int = Field(..., example=40, alias="hours-per-week")
     native_country: str = Field(..., example="United-States", alias="native-country")
 
+<<<<<<< HEAD
+=======
+# Load the encoder and model
+>>>>>>> de7d7c9 (Revert local_api.py and main.py to match origin/main)
 path_encoder = "./model/encoder.pkl"
 encoder = load_model(path_encoder)
 
 path_model = "./model/model.pkl"
 model = load_model(path_model)
 
+<<<<<<< HEAD
+=======
+# Create a RESTful API using FastAPI
+>>>>>>> de7d7c9 (Revert local_api.py and main.py to match origin/main)
 app = FastAPI()
 
 # Create a GET on the root giving a welcome message
